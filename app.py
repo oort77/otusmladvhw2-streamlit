@@ -236,4 +236,4 @@ if __name__ == '__main__':
 """
 )
 
-    st.markdown("And, finally, classification model itself on [Colab](https://colab.research.google.com/github/oort77/OTUS_ADV_HW2/blob/main/notebooks/otus_adv_hw2.ipynb)")
+    st.markdown("And, finally, classification model itself on [Colab](https://colab.research.google.com/github/oort77/otusmladvhw2-notebook/blob/main/otus_adv_hw2.ipynb)")
