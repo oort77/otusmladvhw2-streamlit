@@ -65,11 +65,11 @@ with st.sidebar.expander("I want to choose my values", expanded=False):
 
 send_req = st.button('Send get request')
 
-worker_address = "https://hw2backend.herokuapp.com/predict/"
+backend_address = "https://hw2backend.herokuapp.com/predict/"
 
 # Main page button
 if send_req:
-    prediction = requests.get(worker_address, 
+    prediction = requests.get(backend_address, 
                               params={"q": tuple(x17.values)})
     st.code(f'Parameters sent: {x17.values}')
     col1, col2 = st.columns(2)
@@ -86,7 +86,7 @@ if send_req:
 # Sidebar button        
 
 if send_req_sidebar:
-    prediction = requests.get(worker_address, 
+    prediction = requests.get(backend_address, 
                               params={"q": features})
     st.code(f'Parameters sent: {features}')
     st.write('Model predicts')
@@ -163,12 +163,11 @@ with st.sidebar.expander("I want to choose my values", expanded=False):
 
 ssend_req = st.button('Send get request')
 
-worker_port = int(os.environ.get("PORT", 8080))
-worker_address = "http://worker:" + worker_port + "/predict/"
+backend_address = "https://hw2backend.herokuapp.com/predict/"
 
 # Main page button
 if send_req:
-    prediction = requests.get(worker_address, 
+    prediction = requests.get(backend_address, 
                               params={"q": tuple(x17.values)})
     st.code(f'Parameters sent: {x17.values}')
     col1, col2 = st.columns(2)
@@ -185,7 +184,7 @@ if send_req:
 # Sidebar button        
 
 if send_req_sidebar:
-    prediction = requests.get(worker_address, 
+    prediction = requests.get(backend_address, 
                               params={"q": features})
     st.code(f'Parameters sent: {features}')
     st.write('Model predicts')
@@ -231,7 +230,9 @@ async def predict(q: Optional[List[float]] = Query(None)):
 
 
 if __name__ == '__main__':
-    uvicorn.run("main:app", host="0.0.0.0", port=8080)        
+    # port = int(os.environ.get("PORT", 8080))
+    port = int(os.environ.get("PORT", 8080))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)       
 """
 )
 
