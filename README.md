@@ -5,7 +5,7 @@
 
 #### Frontend
 
-<a href="https://colab.research.google.com/github/oort77/otusmladvhw2-notebook/blob/main/otus_adv_hw2.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+https://share.streamlit.io/oort77/otusmladvhw2-streamlit/main/app.py  
 
 The project consists of three parts/repositories:  
 
