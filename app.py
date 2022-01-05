@@ -65,9 +65,7 @@ with st.sidebar.expander("I want to choose my values", expanded=False):
 
 send_req = st.button('Send get request')
 
-# worker_port = int(os.getenv('WPORT'))
-worker_port = 8080
-worker_address = "http://localhost:" + str(worker_port) + "/predict/"
+worker_address = "https://hw2backend.herokuapp.com/predict/"
 
 # Main page button
 if send_req:
