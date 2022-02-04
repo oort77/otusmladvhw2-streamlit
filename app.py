@@ -9,7 +9,7 @@ import pandas as pd
 import streamlit as st
 import requests
 
-st.set_page_config(page_title='OTUS.ML.ADV_HW2', page_icon='./car_at_night.ico', layout='centered', initial_sidebar_state='expanded')
+st.set_page_config(page_title='OTUS.ML.ADV_HW2', page_icon='./sky.ico', layout='centered', initial_sidebar_state='expanded')
 
 padding = 0
 st.markdown(f""" <style>
